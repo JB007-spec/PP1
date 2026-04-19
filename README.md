@@ -2,7 +2,7 @@ Change JB007-spec
 
 I forked (copied) the repositorie of MaxClerckwells PP1 and commited a change to the README.md file.
 
-Estimated time 3 min
+Estimated time 75 min
 
 # PP1
 
@@ -75,17 +75,30 @@ Fill out the following table, mapping decimal numbers `0` through `15` to their 
 
 | Decimal | Binary Representation |
 |---------|------------------------|
-| 0       | 0000                   |
-| 1       | 0001                   |
-| ...     | ...                    |
-| 15      | ????                   |
+| 0  | 0000 | 
+| 1  | 0001 |
+| 2  | 0010 | 
+| 3  | 0011 |
+| 4  | 0100 |
+| 5  | 0101 |
+| 6  | 0110 |
+| 7  | 0111 |
+| 8  | 1000 |
+| 9  | 1001 |
+| 10 | 1010 |
+| 11 | 1011 | 
+| 12 | 1100 |
+| 13 | 1101 |
+| 14 | 1110 |
+| 15 | 1111 | 
 
 **How many binary digits (bits) are needed?**
 
 Explain how to calculate the number of bits required:
+
 <details>
 <summary>Your Answer</summary>
-Erase this text and write your answer here!
+4 bits are requiered. you can calulate them via 2^N 
 </details>
 
 ---
@@ -113,14 +126,24 @@ Refer to the truth table of a 1-bit full adder:
 #### Your Task
 Create a truth table for a **2-bit adder** without carry-in. What are the possible inputs and outputs?
 
->   Your
->
->   table
->
->   goes
->
->   here!
-
+| A1 | A0 | B1 | B0 | S2 | S1 | S0 |
+|----|----|----|----|----|----|----|
+| 0  | 0  | 0  | 0  | 0  | 0  | 0  |
+| 0  | 0  | 0  | 1  | 0  | 0  | 1  |
+| 0  | 0  | 1  | 0  | 0  | 1  | 0  |
+| 0  | 0  | 1  | 1  | 0  | 1  | 1  |
+| 0  | 1  | 0  | 0  | 0  | 0  | 1  |
+| 0  | 1  | 0  | 1  | 0  | 1  | 0  |
+| 0  | 1  | 1  | 0  | 0  | 1  | 1  |
+| 0  | 1  | 1  | 1  | 1  | 0  | 0  |
+| 1  | 0  | 0  | 0  | 0  | 1  | 0  |
+| 1  | 0  | 0  | 1  | 0  | 1  | 1  |
+| 1  | 0  | 1  | 0  | 1  | 0  | 0  |
+| 1  | 0  | 1  | 1  | 1  | 0  | 1  |
+| 1  | 1  | 0  | 0  | 0  | 1  | 1  |
+| 1  | 1  | 0  | 1  | 1  | 0  | 0  |
+| 1  | 1  | 1  | 0  | 1  | 0  | 1  |
+| 1  | 1  | 1  | 1  | 1  | 1  | 0  | 
 ---
 
 ### Task 3: Boolean Equations via Karnaugh Maps
@@ -134,11 +157,13 @@ Use the [K-Map method](https://github.com/STEMgraph/4b957490-badf-4264-b9f2-1b5a
 <details>
 <summary>The final functions</summary>
 
-Q<sub>0</sub> = .......
+Q<sub>0</sub> = A0'·B0 + A0·B0'
 
-Q<sub>1</sub> = .......
+Q<sub>1</sub> = A1'·B1'·A0·B0' + A1'·B1'·A0'·B0
+   + A1'·B1·A0'·B0' + A1·B1'·A0'·B0'
+   + A1·B1·A0'·B0 + A1·B1·A0·B0'
 
-C<sub>out</sub> = .......
+C<sub>out</sub> = A1·B1 + A1·A0·B0 + B1·A0·B0
 
 </details>
 
@@ -149,7 +174,7 @@ Using your Boolean equations, build a logic network in [CircuitVerse](https://ci
 
 <details>
 <summary>Your solution</summary>
-A share link to your solution goes here: <a href=".................">Link!</a>
+A share link to your solution goes here: <a href="https://circuitverse.org/users/422364/projects/q0-a0-b0-a0b0-4b6d8824-b675-498f-8f6c-72bce44ae0d2">Link!</a>
 </details>
 
 ---
