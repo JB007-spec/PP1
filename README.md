@@ -1,6 +1,6 @@
 Change JB007-spec
 
-I forked (copied) the repositorie of MaxClerckwells PP1 and commited a change to the README.md file.
+I forked (copied) the repositorie of MaxClerkwells PP1 and commited a change to the README.md file.
 
 Estimated time 75 min
 
